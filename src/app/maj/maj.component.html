@@ -1,0 +1,9 @@
+<form #myForm="ngForm" (ngSubmit)="onSubmit()">
+    <input [(ngModel)]="updatedEtudiant.nom" type="text" name="nom" id="" placeholder="nom"><br>
+    <input [(ngModel)]="updatedEtudiant.prenom" type="text" name="prenom" id="" placeholder="prenom"><br>
+    <input [(ngModel)]="updatedEtudiant.adresse" type="text" name="adresse" id="" placeholder="adresse"><br>
+    <input [(ngModel)]="updatedEtudiant.email" type="email" name="email" id="" placeholder="email"><br>
+    <input [(ngModel)]="updatedEtudiant.telephone" type="text" name="telephone" id="" placeholder="telephone"><br>
+    <button type="submit">Maj</button>
+    <button routerLink="/home">Home</button>
+</form>

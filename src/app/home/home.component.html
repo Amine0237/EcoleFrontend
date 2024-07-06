@@ -1,0 +1,25 @@
+
+<table>
+    <tr>
+        <td>Nom</td>
+        <td>Prenom</td>
+        <td>Adresse</td>
+        <td>Email</td>
+        <td>Telephone</td>
+        <td>Actions</td>
+    </tr>
+    <tr *ngFor="let etudiant of etudiants">
+        <td>{{etudiant.nom}}</td>
+        <td>{{etudiant.prenom}}</td>
+        <td>{{etudiant.adresse}}</td>
+        <td>{{etudiant.email}}</td>
+        <td>{{etudiant.telephone}}</td>
+        <td>
+            <button (click)="navigateToMaj(etudiant.id)" routerLink="/maj/{{etudiant.id}}">Maj</button>
+            <button (click)="deleteEtudiant(etudiant.id)">-</button>
+        </td>
+
+    </tr>
+</table>
+
+<button routerLink="/ajouter">Ajouter</button>
